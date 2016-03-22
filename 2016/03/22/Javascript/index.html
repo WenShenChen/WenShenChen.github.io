@@ -1,0 +1,1040 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="JavaScript," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="JavaScriptTypeSix data types that are primitives:
+Boolean
+
+Null
+
+Undefined
+
+Number
+
+String
+
+Symbol (new in ECMAScript 6)
+
+
+Reference Type">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript">
+<meta property="og:url" content="http://yoursite.com/2016/03/22/Javascript/index.html">
+<meta property="og:site_name" content="yong">
+<meta property="og:description" content="JavaScriptTypeSix data types that are primitives:
+Boolean
+
+Null
+
+Undefined
+
+Number
+
+String
+
+Symbol (new in ECMAScript 6)
+
+
+Reference Type">
+<meta property="og:updated_time" content="2016-03-22T19:33:58.829Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript">
+<meta name="twitter:description" content="JavaScriptTypeSix data types that are primitives:
+Boolean
+
+Null
+
+Undefined
+
+Number
+
+String
+
+Symbol (new in ECMAScript 6)
+
+
+Reference Type">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+  <title> JavaScript | yong </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="fr-FR">
+
+  
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">yong</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            Accueil
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                JavaScript
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posté le</span>
+            <time itemprop="dateCreated" datetime="2016-03-22T15:33:58-04:00" content="2016-03-22">
+              2016-03-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/programming/" itemprop="url" rel="index">
+                    <span itemprop="name">programming</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript<a id="orgheadline51"></a></h1><h2 id="Type"><a href="#Type" class="headerlink" title="Type"></a>Type<a id="orgheadline27"></a></h2><h3 id="Six-data-types-that-are-primitives"><a href="#Six-data-types-that-are-primitives" class="headerlink" title="Six data types that are primitives:"></a>Six data types that are primitives:<a id="orgheadline7"></a></h3><ol>
+<li><p>Boolean</p>
+</li>
+<li><p>Null</p>
+</li>
+<li><p>Undefined</p>
+</li>
+<li><p>Number</p>
+</li>
+<li><p>String</p>
+</li>
+<li><p>Symbol (new in ECMAScript 6)</p>
+</li>
+</ol>
+<h3 id="Reference-Type"><a href="#Reference-Type" class="headerlink" title="Reference Type"></a>Reference Type<a id="orgheadline26"></a></h3><a id="more"></a>q<br><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>  Arrays</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> entry = [<span class="string">'Trains'</span>, <span class="string">'Plains'</span>,<span class="string">'automobiles'</span>];</span><br><span class="line">        <span class="built_in">console</span>.log (entry);</span><br></pre></td></tr></table></figure>
+<pre><code>&lt;table border=&quot;2&quot; cellspacing=&quot;0&quot; cellpadding=&quot;6&quot; rules=&quot;groups&quot; frame=&quot;hsides&quot;&gt;
+
+
+&lt;colgroup&gt;
+&lt;col  class=&quot;org-left&quot; /&gt;
+
+&lt;col  class=&quot;org-left&quot; /&gt;
+
+&lt;col  class=&quot;org-left&quot; /&gt;
+&lt;/colgroup&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td class=&quot;org-left&quot;&gt;Trains&lt;/td&gt;
+&lt;td class=&quot;org-left&quot;&gt;Plains&lt;/td&gt;
+&lt;td class=&quot;org-left&quot;&gt;automobiles&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre><ol>
+<li><p>Object</p>
+</li>
+<li><p>Dates</p>
+</li>
+<li><p>function</p>
+<ol>
+<li><p>TODO function constructor</p>
+<ul>
+<li>prototype</li>
+<li>this</li>
+</ul>
+</li>
+<li><p>the “this” keyword</p>
+</li>
+<li><p>using Call and Apply</p>
+<ol>
+<li><p>Normal function call</p>
+<pre><code>&quot;use strict&quot;;
+var updateZipCode = function(){
+console.log(this);
+}
+updateZipCode();
+
+undefined
+undefined
+</code></pre></li>
+<li><p>Using Call on function</p>
+<ol>
+<li><p>Passing a object in to call</p>
+<pre><code>&quot;use strict&quot;;
+var updateZipCode = function(){
+console.log(this);
+};
+updateZipCode.call({zip: &apos;123456&apos;});
+
+{ zip: &apos;123456&apos; }
+undefined
+</code></pre></li>
+<li><p>Passing a object varibale</p>
+<pre><code> &quot;use strict&quot;;
+ var updateZipCode = function(){
+ console.log(this);
+ };
+
+var zipCode = {
+zipJson: &apos;654321&apos;
+};
+updateZipCode.call(zipCode);
+</code></pre></li>
+<li><p>Using Call on function with paramters</p>
+<pre><code>&quot;use strict&quot;;
+   var updateZipCode2 = function(newZip, country){
+   console.log(&quot;old zipcode:&quot; + this.zipJson);
+   console.log(&quot;new zipcode:&quot; + newZip);
+   console.log(&quot;country:&quot; + country);
+     };
+
+  var zipCode = {
+  zipJson: &apos;654321&apos;
+  };
+  updateZipCode2.call(zipCode,&apos;1111111&apos;,&apos;quebec&apos;);
+
+old zipcode:654321
+new zipcode:1111111
+country:quebec
+undefined
+</code></pre></li>
+</ol>
+</li>
+<li><p>Using apply on function</p>
+<p>The apply() method calls a function with a given this value and arguments provided as an array (or an array-like object).</p>
+<pre><code>&quot;use strict&quot;;
+   var updateZipCode2 = function(newZip, country){
+   console.log(&quot;old zipcode:&quot; + this.zipJson);
+   console.log(&quot;new zipcode:&quot; + newZip);
+   console.log(&quot;country:&quot; + country);
+     };
+
+  var zipCode = {
+  zipJson: &apos;654321&apos;
+  };
+  updateZipCode2.apply(zipCode,[&apos;1111111&apos;,&apos;quebec&apos;]);
+
+old zipcode:654321
+new zipcode:1111111
+country:quebec
+undefined
+</code></pre></li>
+</ol>
+</li>
+<li><p>Closure</p>
+</li>
+<li><p>IIFEs</p>
+<ol>
+<li><p>IIFE</p>
+<pre><code> var app = {};
+ var value = (function(ns) {
+  ns.name = &apos;angular&apos;;
+  })(app);
+console.log(app.name);
+
+angular
+undefined
+</code></pre></li>
+<li><p>we can use unary operator instead of parentheses.( advatnage or disadvantage?)</p>
+<pre><code>+function(){
+var iife = &apos;example 1&apos;;
+console.log(&apos;Executed example 1&apos;);
+}();
+</code></pre></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<pre><code>!function example2(){
+var iife = &apos;example 2&apos;;
+console.log(&apos;Executed example 2&apos;);
+}();
+
+
+-function example2(){
+var iife = &apos;example 3&apos;;
+console.log(&apos;Executed example 3&apos;);
+}();
+
+Executed example 1
+Executed example 2
+Executed example 3
+undefined
+</code></pre><ol>
+<li>RegEx</li>
+</ol>
+<h2 id="Scope"><a href="#Scope" class="headerlink" title="Scope"></a>Scope<a id="orgheadline31"></a></h2><h3 id="Global-scope"><a href="#Global-scope" class="headerlink" title="Global scope"></a>Global scope<a id="orgheadline28"></a></h3><h3 id="Function-Scope"><a href="#Function-Scope" class="headerlink" title="Function Scope"></a>Function Scope<a id="orgheadline29"></a></h3><h3 id="block-scope"><a href="#block-scope" class="headerlink" title="block scope"></a>block scope<a id="orgheadline30"></a></h3><h2 id="BOM-and-DOM"><a href="#BOM-and-DOM" class="headerlink" title="BOM and DOM"></a>BOM and DOM<a id="orgheadline37"></a></h2><ul>
+<li>BOM -&gt; broswer object model</li>
+<li>DOM -&gt; document object model</li>
+</ul>
+<h3 id="the-window-object-global-object-in-NodeJs"><a href="#the-window-object-global-object-in-NodeJs" class="headerlink" title="the window object (global object in NodeJs)"></a>the window object (global object in NodeJs)<a id="orgheadline32"></a></h3><h3 id="system-dialogs"><a href="#system-dialogs" class="headerlink" title="system dialogs"></a>system dialogs<a id="orgheadline33"></a></h3><ul>
+<li>alert()</li>
+<li>confirm()</li>
+<li>prompt()</li>
+</ul>
+<h3 id="location-Object"><a href="#location-Object" class="headerlink" title="location Object"></a>location Object<a id="orgheadline34"></a></h3><p>location.href<br>location.port<br>location.host<br>location.assign(‘<a href="http://www.google.com" target="_blank" rel="external">http://www.google.com</a>‘)</p>
+<h3 id="html-document-basics"><a href="#html-document-basics" class="headerlink" title="html document basics"></a>html document basics<a id="orgheadline35"></a></h3><h3 id="query-selectors"><a href="#query-selectors" class="headerlink" title="query selectors"></a>query selectors<a id="orgheadline36"></a></h3><h2 id="Event-handler"><a href="#Event-handler" class="headerlink" title="Event handler"></a>Event handler<a id="orgheadline49"></a></h2><h3 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events<a id="orgheadline38"></a></h3><ul>
+<li>User Interface events<ol>
+<li>load</li>
+<li>unload</li>
+<li>abort</li>
+<li>error</li>
+<li>select</li>
+<li>resize</li>
+<li>scroll</li>
+</ol>
+</li>
+<li>Mouse and Mouse wheel events<ol>
+<li>click</li>
+<li>dbclick</li>
+<li>mousedown</li>
+<li>mouseenter</li>
+<li>mouseleave</li>
+<li>mousemove</li>
+<li>mouseout</li>
+<li>mouseover</li>
+<li>mouseup</li>
+<li>mousewheel</li>
+</ol>
+</li>
+<li>keyboard and Text Events<ol>
+<li>keyDown</li>
+<li>keypress</li>
+<li>keyup</li>
+<li>textInput</li>
+</ol>
+</li>
+<li>focus events<ol>
+<li>blur</li>
+<li>focus</li>
+<li>focusin</li>
+<li>focusout</li>
+</ol>
+</li>
+<li>html5 events<ol>
+<li>contextMenu</li>
+<li>beforeUnload</li>
+</ol>
+</li>
+<li>touch Events.</li>
+</ul>
+<h3 id="Event-Object"><a href="#Event-Object" class="headerlink" title="Event Object"></a>Event Object<a id="orgheadline40"></a></h3><ol>
+<li><p>Event Object Properties</p>
+<ol>
+<li>bubbles</li>
+<li>cancelable</li>
+<li>currentTarget</li>
+<li>defaultPrevented</li>
+<li>detial</li>
+<li>eventPhase</li>
+<li>preventDefault</li>
+<li>stopImmediatePropagation</li>
+<li>stopPropagation</li>
+<li>target</li>
+<li>trusted</li>
+<li>type</li>
+</ol>
+</li>
+</ol>
+<h3 id="handling-events"><a href="#handling-events" class="headerlink" title="handling events"></a>handling events<a id="orgheadline41"></a></h3><h3 id="event-Listeners"><a href="#event-Listeners" class="headerlink" title="event Listeners"></a>event Listeners<a id="orgheadline42"></a></h3><h3 id="event-bubbling"><a href="#event-bubbling" class="headerlink" title="event bubbling"></a>event bubbling<a id="orgheadline43"></a></h3><h3 id="built-in-Object-and-Functions"><a href="#built-in-Object-and-Functions" class="headerlink" title="built-in Object and Functions"></a>built-in Object and Functions<a id="orgheadline48"></a></h3><ol>
+<li><p>Global Functions</p>
+<p>parseInt(‘1234’) <em>/ 1234<br>parseInt(‘b1234’) /</em> NaN<br>parseInt(‘12z34’) <em>/ 12<br>parseInt(‘1234.99) /</em> 1234</p>
+<p>ParseFloat</p>
+<p>encodeURL<br>decodeURL</p>
+<p>eval</p>
+</li>
+<li><p>Math</p>
+</li>
+<li><p>String</p>
+</li>
+<li><p>Arguments</p>
+<pre><code>var validateValues = function (){
+console.log(arguments.length);
+}
+validateValues(1, true,&apos;settings&apos;);
+</code></pre></li>
+</ol>
+<h2 id="temp"><a href="#temp" class="headerlink" title="temp"></a>temp<a id="orgheadline50"></a></h2><p><a href="http://mp.weixin.qq.com/s?__biz=MzAxODE2MjM1MA==&amp;mid=400892209&amp;idx=1&amp;sn=b5048f8067362caa14b19be26beca2ea&amp;scene=21#wechat_redirect" target="_blank" rel="external">js and closure</a></p>
+<pre><code>function fun(n,o) {
+
+  console.log(o)
+
+  return {
+
+    fun:function(m){
+
+      return fun(m,n);
+
+    }
+
+  };
+
+}
+
+
+var a = fun(0);  a.fun(1);  a.fun(2);  a.fun(3);//undefined,?,?,?
+var b = fun(0).fun(1).fun(2).fun(3);//undefined,?,?,?
+var c = fun(0).fun(1);  c.fun(2);  c.fun(3);//undefined,?,?,?
+
+undefined
+0
+0
+0
+undefined
+0
+1
+2
+undefined
+0
+1
+1
+undefined
+
+  function myFunction() {
+    var a = 4;
+    return a * a;
+}
+
+return myFunction();
+
+16
+</code></pre>
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/03/22/DesignPattern/" rel="next" title="Design Pattern">
+                <i class="fa fa-chevron-left"></i> Design Pattern
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table Des Matières
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Ensemble
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/default_avatar.jpg"
+               alt="陈泳" />
+          <p class="site-author-name" itemprop="name">陈泳</p>
+          <p class="site-description motion-element" itemprop="description">desc value</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">articles</span>
+            </a>
+          </div>
+          
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript"><span class="nav-number">1.</span> <span class="nav-text">JavaScript</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Type"><span class="nav-number">1.1.</span> <span class="nav-text">Type</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Six-data-types-that-are-primitives"><span class="nav-number">1.1.1.</span> <span class="nav-text">Six data types that are primitives:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference-Type"><span class="nav-number">1.1.2.</span> <span class="nav-text">Reference Type</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Scope"><span class="nav-number">1.2.</span> <span class="nav-text">Scope</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Global-scope"><span class="nav-number">1.2.1.</span> <span class="nav-text">Global scope</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Function-Scope"><span class="nav-number">1.2.2.</span> <span class="nav-text">Function Scope</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#block-scope"><span class="nav-number">1.2.3.</span> <span class="nav-text">block scope</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BOM-and-DOM"><span class="nav-number">1.3.</span> <span class="nav-text">BOM and DOM</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#the-window-object-global-object-in-NodeJs"><span class="nav-number">1.3.1.</span> <span class="nav-text">the window object (global object in NodeJs)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#system-dialogs"><span class="nav-number">1.3.2.</span> <span class="nav-text">system dialogs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#location-Object"><span class="nav-number">1.3.3.</span> <span class="nav-text">location Object</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#html-document-basics"><span class="nav-number">1.3.4.</span> <span class="nav-text">html document basics</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#query-selectors"><span class="nav-number">1.3.5.</span> <span class="nav-text">query selectors</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Event-handler"><span class="nav-number">1.4.</span> <span class="nav-text">Event handler</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Events"><span class="nav-number">1.4.1.</span> <span class="nav-text">Events</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Event-Object"><span class="nav-number">1.4.2.</span> <span class="nav-text">Event Object</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#handling-events"><span class="nav-number">1.4.3.</span> <span class="nav-text">handling events</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#event-Listeners"><span class="nav-number">1.4.4.</span> <span class="nav-text">event Listeners</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#event-bubbling"><span class="nav-number">1.4.5.</span> <span class="nav-text">event bubbling</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#built-in-Object-and-Functions"><span class="nav-number">1.4.6.</span> <span class="nav-text">built-in Object and Functions</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#temp"><span class="nav-number">1.5.</span> <span class="nav-text">temp</span></a></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">陈泳</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Thème -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+  
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.scheme !== 'Pisces' && (CONFIG.sidebar.display === 'post' || CONFIG.sidebar.display === 'always')) {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+
+</body>
+</html>
