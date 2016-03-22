@@ -91,7 +91,7 @@ Symbol (new in ECMAScript 6)
 
 
 Reference Type">
-<meta property="og:updated_time" content="2016-03-22T19:33:58.829Z">
+<meta property="og:updated_time" content="2016-03-22T20:10:38.455Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript">
 <meta name="twitter:description" content="JavaScriptTypeSix data types that are primitives:
@@ -266,7 +266,7 @@ Reference Type">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posté le</span>
-            <time itemprop="dateCreated" datetime="2016-03-22T15:33:58-04:00" content="2016-03-22">
+            <time itemprop="dateCreated" datetime="2016-03-22T16:10:38-04:00" content="2016-03-22">
               2016-03-22
             </time>
           </span>
@@ -326,26 +326,11 @@ Reference Type">
 <li><p>Symbol (new in ECMAScript 6)</p>
 </li>
 </ol>
-<h3 id="Reference-Type"><a href="#Reference-Type" class="headerlink" title="Reference Type"></a>Reference Type<a id="orgheadline26"></a></h3><a id="more"></a>q<br><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>  Arrays</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> entry = [<span class="string">'Trains'</span>, <span class="string">'Plains'</span>,<span class="string">'automobiles'</span>];</span><br><span class="line">        <span class="built_in">console</span>.log (entry);</span><br></pre></td></tr></table></figure>
-<pre><code>&lt;table border=&quot;2&quot; cellspacing=&quot;0&quot; cellpadding=&quot;6&quot; rules=&quot;groups&quot; frame=&quot;hsides&quot;&gt;
-
-
-&lt;colgroup&gt;
-&lt;col  class=&quot;org-left&quot; /&gt;
-
-&lt;col  class=&quot;org-left&quot; /&gt;
-
-&lt;col  class=&quot;org-left&quot; /&gt;
-&lt;/colgroup&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td class=&quot;org-left&quot;&gt;Trains&lt;/td&gt;
-&lt;td class=&quot;org-left&quot;&gt;Plains&lt;/td&gt;
-&lt;td class=&quot;org-left&quot;&gt;automobiles&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</code></pre><ol>
+<h3 id="Reference-Type"><a href="#Reference-Type" class="headerlink" title="Reference Type"></a>Reference Type<a id="orgheadline26"></a></h3><a id="more"></a>
+<ol>
+<li><p>Arrays</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> entry = [<span class="string">'Trains'</span>, <span class="string">'Plains'</span>,<span class="string">'automobiles'</span>];</span><br><span class="line"><span class="built_in">console</span>.log (entry);</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>Object</p>
 </li>
 <li><p>Dates</p>
@@ -363,52 +348,21 @@ Reference Type">
 <li><p>using Call and Apply</p>
 <ol>
 <li><p>Normal function call</p>
-<pre><code>&quot;use strict&quot;;
-var updateZipCode = function(){
-console.log(this);
-}
-updateZipCode();
-
-undefined
-undefined
-</code></pre></li>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">"use strict"</span>;</span><br><span class="line"><span class="keyword">var</span> updateZipCode = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line">&#125;</span><br><span class="line">updateZipCode();</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>Using Call on function</p>
 <ol>
 <li><p>Passing a object in to call</p>
-<pre><code>&quot;use strict&quot;;
-var updateZipCode = function(){
-console.log(this);
-};
-updateZipCode.call({zip: &apos;123456&apos;});
-
-{ zip: &apos;123456&apos; }
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">"use strict"</span>;</span><br><span class="line"><span class="keyword">var</span> updateZipCode = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line">&#125;;</span><br><span class="line">updateZipCode.call(&#123;zip: <span class="string">'123456'</span>&#125;);</span><br></pre></td></tr></table></figure>
+<pre><code>{ zip: &apos;123456&apos; }
 undefined
 </code></pre></li>
 <li><p>Passing a object varibale</p>
-<pre><code> &quot;use strict&quot;;
- var updateZipCode = function(){
- console.log(this);
- };
-
-var zipCode = {
-zipJson: &apos;654321&apos;
-};
-updateZipCode.call(zipCode);
-</code></pre></li>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"> "use strict"</span>;</span><br><span class="line"> <span class="keyword">var</span> updateZipCode = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"> <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line"> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> zipCode = &#123;</span><br><span class="line">zipJson: <span class="string">'654321'</span></span><br><span class="line">&#125;;</span><br><span class="line">updateZipCode.call(zipCode);</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>Using Call on function with paramters</p>
-<pre><code>&quot;use strict&quot;;
-   var updateZipCode2 = function(newZip, country){
-   console.log(&quot;old zipcode:&quot; + this.zipJson);
-   console.log(&quot;new zipcode:&quot; + newZip);
-   console.log(&quot;country:&quot; + country);
-     };
-
-  var zipCode = {
-  zipJson: &apos;654321&apos;
-  };
-  updateZipCode2.call(zipCode,&apos;1111111&apos;,&apos;quebec&apos;);
-
-old zipcode:654321
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">"use strict"</span>;</span><br><span class="line">   <span class="keyword">var</span> updateZipCode2 = <span class="function"><span class="keyword">function</span>(<span class="params">newZip, country</span>)</span>&#123;</span><br><span class="line">   <span class="built_in">console</span>.log(<span class="string">"old zipcode:"</span> + <span class="keyword">this</span>.zipJson);</span><br><span class="line">   <span class="built_in">console</span>.log(<span class="string">"new zipcode:"</span> + newZip);</span><br><span class="line">   <span class="built_in">console</span>.log(<span class="string">"country:"</span> + country);</span><br><span class="line">     &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> zipCode = &#123;</span><br><span class="line">  zipJson: <span class="string">'654321'</span></span><br><span class="line">  &#125;;</span><br><span class="line">  updateZipCode2.call(zipCode,<span class="string">'1111111'</span>,<span class="string">'quebec'</span>);</span><br></pre></td></tr></table></figure>
+<pre><code>old zipcode:654321
 new zipcode:1111111
 country:quebec
 undefined
@@ -417,17 +371,7 @@ undefined
 </li>
 <li><p>Using apply on function</p>
 <p>The apply() method calls a function with a given this value and arguments provided as an array (or an array-like object).</p>
-<pre><code>&quot;use strict&quot;;
-   var updateZipCode2 = function(newZip, country){
-   console.log(&quot;old zipcode:&quot; + this.zipJson);
-   console.log(&quot;new zipcode:&quot; + newZip);
-   console.log(&quot;country:&quot; + country);
-     };
-
-  var zipCode = {
-  zipJson: &apos;654321&apos;
-  };
-  updateZipCode2.apply(zipCode,[&apos;1111111&apos;,&apos;quebec&apos;]);
+<pre><code> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">"use strict"</span>;</span><br><span class="line">   <span class="keyword">var</span> updateZipCode2 = <span class="function"><span class="keyword">function</span>(<span class="params">newZip, country</span>)</span>&#123;</span><br><span class="line">   <span class="built_in">console</span>.log(<span class="string">"old zipcode:"</span> + <span class="keyword">this</span>.zipJson);</span><br><span class="line">   <span class="built_in">console</span>.log(<span class="string">"new zipcode:"</span> + newZip);</span><br><span class="line">   <span class="built_in">console</span>.log(<span class="string">"country:"</span> + country);</span><br><span class="line">     &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> zipCode = &#123;</span><br><span class="line">  zipJson: <span class="string">'654321'</span></span><br><span class="line">  &#125;;</span><br><span class="line">  updateZipCode2.apply(zipCode,[<span class="string">'1111111'</span>,<span class="string">'quebec'</span>]);</span><br></pre></td></tr></table></figure>
 
 old zipcode:654321
 new zipcode:1111111
@@ -441,43 +385,23 @@ undefined
 <li><p>IIFEs</p>
 <ol>
 <li><p>IIFE</p>
-<pre><code> var app = {};
- var value = (function(ns) {
-  ns.name = &apos;angular&apos;;
-  })(app);
-console.log(app.name);
-
-angular
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">var</span> app = &#123;&#125;;</span><br><span class="line"> <span class="keyword">var</span> value = (<span class="function"><span class="keyword">function</span>(<span class="params">ns</span>) </span>&#123;</span><br><span class="line">  ns.name = <span class="string">'angular'</span>;</span><br><span class="line">  &#125;)(app);</span><br><span class="line"><span class="built_in">console</span>.log(app.name);</span><br></pre></td></tr></table></figure>
+<pre><code>angular
 undefined
 </code></pre></li>
 <li><p>we can use unary operator instead of parentheses.( advatnage or disadvantage?)</p>
-<pre><code>+function(){
-var iife = &apos;example 1&apos;;
-console.log(&apos;Executed example 1&apos;);
-}();
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">+<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">var</span> iife = <span class="string">'example 1'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'Executed example 1'</span>);</span><br><span class="line">&#125;();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">!<span class="function"><span class="keyword">function</span> <span class="title">example2</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">var</span> iife = <span class="string">'example 2'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'Executed example 2'</span>);</span><br><span class="line">&#125;();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">-<span class="function"><span class="keyword">function</span> <span class="title">example2</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">var</span> iife = <span class="string">'example 3'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'Executed example 3'</span>);</span><br><span class="line">&#125;();</span><br></pre></td></tr></table></figure>
+<pre><code>Executed example 1
+Executed example 2
+Executed example 3
+undefined
 </code></pre></li>
 </ol>
 </li>
 </ol>
 </li>
-</ol>
-<pre><code>!function example2(){
-var iife = &apos;example 2&apos;;
-console.log(&apos;Executed example 2&apos;);
-}();
-
-
--function example2(){
-var iife = &apos;example 3&apos;;
-console.log(&apos;Executed example 3&apos;);
-}();
-
-Executed example 1
-Executed example 2
-Executed example 3
-undefined
-</code></pre><ol>
-<li>RegEx</li>
+<li><p>RegEx</p>
+</li>
 </ol>
 <h2 id="Scope"><a href="#Scope" class="headerlink" title="Scope"></a>Scope<a id="orgheadline31"></a></h2><h3 id="Global-scope"><a href="#Global-scope" class="headerlink" title="Global scope"></a>Global scope<a id="orgheadline28"></a></h3><h3 id="Function-Scope"><a href="#Function-Scope" class="headerlink" title="Function Scope"></a>Function Scope<a id="orgheadline29"></a></h3><h3 id="block-scope"><a href="#block-scope" class="headerlink" title="block scope"></a>block scope<a id="orgheadline30"></a></h3><h2 id="BOM-and-DOM"><a href="#BOM-and-DOM" class="headerlink" title="BOM and DOM"></a>BOM and DOM<a id="orgheadline37"></a></h2><ul>
 <li>BOM -&gt; broswer object model</li>
@@ -571,28 +495,8 @@ validateValues(1, true,&apos;settings&apos;);
 </code></pre></li>
 </ol>
 <h2 id="temp"><a href="#temp" class="headerlink" title="temp"></a>temp<a id="orgheadline50"></a></h2><p><a href="http://mp.weixin.qq.com/s?__biz=MzAxODE2MjM1MA==&amp;mid=400892209&amp;idx=1&amp;sn=b5048f8067362caa14b19be26beca2ea&amp;scene=21#wechat_redirect" target="_blank" rel="external">js and closure</a></p>
-<pre><code>function fun(n,o) {
-
-  console.log(o)
-
-  return {
-
-    fun:function(m){
-
-      return fun(m,n);
-
-    }
-
-  };
-
-}
-
-
-var a = fun(0);  a.fun(1);  a.fun(2);  a.fun(3);//undefined,?,?,?
-var b = fun(0).fun(1).fun(2).fun(3);//undefined,?,?,?
-var c = fun(0).fun(1);  c.fun(2);  c.fun(3);//undefined,?,?,?
-
-undefined
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params">n,o</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">console</span>.log(o)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line"></span><br><span class="line">    fun:<span class="function"><span class="keyword">function</span>(<span class="params">m</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">return</span> fun(m,n);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> a = fun(<span class="number">0</span>);  a.fun(<span class="number">1</span>);  a.fun(<span class="number">2</span>);  a.fun(<span class="number">3</span>);<span class="comment">//undefined,?,?,?</span></span><br><span class="line"><span class="keyword">var</span> b = fun(<span class="number">0</span>).fun(<span class="number">1</span>).fun(<span class="number">2</span>).fun(<span class="number">3</span>);<span class="comment">//undefined,?,?,?</span></span><br><span class="line"><span class="keyword">var</span> c = fun(<span class="number">0</span>).fun(<span class="number">1</span>);  c.fun(<span class="number">2</span>);  c.fun(<span class="number">3</span>);<span class="comment">//undefined,?,?,?</span></span><br></pre></td></tr></table></figure>
+<pre><code>undefined
 0
 0
 0
@@ -606,12 +510,7 @@ undefined
 1
 undefined
 
-  function myFunction() {
-    var a = 4;
-    return a * a;
-}
-
-return myFunction();
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a = <span class="number">4</span>;</span><br><span class="line">    <span class="keyword">return</span> a * a;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> myFunction();</span><br></pre></td></tr></table></figure>
 
 16
 </code></pre>
